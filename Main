@@ -1,8 +1,31 @@
-if game.PlaceId == 1537690962 then
-    loadstring(game:HttpGet(""))()
-    elseif game.PlaceId == 0 then
-
-
-
+local function loadScriptFromUrl(url)
+    local success, script = pcall(game.HttpGet, game, url)
     
+    if success then
+        loadstring(script)()  
+    else
+        warn("Failed to fetch script from URL:", url)
     end
+end
+
+
+local placeId = game.PlaceId
+
+if placeId == 1537690962 then
+
+    local scriptUrl = "https://raw.githubusercontent.com/aeroxhub/AeroHub/main/ABSS?token=GHSAT0AAAAAACVOO2VCQXKXMO6CJARQDZFCZVH77TA"
+    loadScriptFromUrl(scriptUrl)
+
+elseif placeId == 1234567890 then
+    local scriptUrl = "https://example.com/another-script.lua"
+    loadScriptFromUrl(scriptUrl)
+
+elseif placeId == 9876543210 then
+
+    local scriptUrl = "https://example.com/yet-another-script.lua"
+    loadScriptFromUrl(scriptUrl)
+
+else
+
+    warn("Unhandled PlaceId:", placeId)
+end
