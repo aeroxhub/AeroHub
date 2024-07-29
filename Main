@@ -1,0 +1,8 @@
+if game.PlaceId == 1537690962 then
+    loadstring(game:HttpGet(""))()
+    elseif game.PlaceId == 0 then
+
+
+
+    
+    end
