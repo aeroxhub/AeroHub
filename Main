@@ -13,7 +13,7 @@ local placeId = game.PlaceId
 
 if placeId == 1537690962 then
 
-    local scriptUrl = "https://raw.githubusercontent.com/aeroxhub/AeroHub/main/ABSS?token=GHSAT0AAAAAACVOO2VCQXKXMO6CJARQDZFCZVH77TA"
+    local scriptUrl = "https://raw.githubusercontent.com/aeroxhub/AeroHub/main/ABSS"
     loadScriptFromUrl(scriptUrl)
 
 elseif placeId == 1234567890 then
